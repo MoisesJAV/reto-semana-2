@@ -100,7 +100,7 @@
 
   .perfil{
     display: flex;
-    justify-content: center;
+    justify-content: justify;
     text-align: center;
     padding: 0 2rem;
   }
@@ -122,24 +122,29 @@
   
   .perfil__info-title{
     margin: 0;
+    margin-top:2rem;
     color: #282c34;
+    text-align: center;
   }
   
   .perfil__info-description{
     margin: 0;
+    margin-top: 1rem;
     font-size: 0.8rem;
+    text-align: justify;
   }
   
   .perfil__info-link-container{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   }
   
   .perfil__info-link{
     display: inline-block;
-    background-color: aqua;
-    border: 0.1rem solid aqua;
+    background-color: brown;
+    border: 0.1rem solid yellow;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.5rem;
@@ -157,12 +162,12 @@
     display: flex;
     justify-content: center;
     max-width: 1024;
+    margin-left: 1rem;
   }
   
   .perfil__cover-image-container{
     display: flex;
     max-width: 18rem;
-    margin: auto;
     border: 0.25rem solid #20232a;
     border-radius: 25%;
   overflow: hidden;
@@ -209,7 +214,7 @@
   
   .promotion__date{
     margin: 0;
-    color: brown;
+    color: blue;
   }
   
   .promotions__destiny{
@@ -218,7 +223,7 @@
   }
   
   .promotions__pack{
-    color: brown;
+    color: blue;
     margin: 0;
     font-weight: 400;
   }
@@ -253,12 +258,12 @@
 
   .contacto{
     text-align: center;
-   padding: 2rem 0;
+   padding: 1rem 0;
   }
   .contacto-container{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.5rem;
     padding: 0 2rem;
     margin: auto;
   max-width: 1024px;
@@ -267,6 +272,7 @@
   .contacto__title{
     margin: 0;
     font-size: 2rem;
+    margin-top: -2rem;
   }
   
   .contacto__form{
@@ -288,8 +294,8 @@
   
   .contacto__form-buttom{
     align-self: center;
-    background-color: aqua;
-    border: 0.1rem solid aqua;
+    background-color: brown;
+    border: 0.1rem solid yellow;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -321,3 +327,63 @@
     flex-direction: column;
     text-align: center;
   }
+
+  @media (min-width:854px){
+    .header-nav__menu-icon {
+      display: none;
+    }
+  
+    .header-nav__link-list {
+      position: static;
+      flex-direction: row;
+      width: auto;
+      background-color: inherit;
+    }
+  
+    .header-nav__link {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+    .perfil{
+    flex-direction:row;
+    text-align: start;
+    }
+  
+    .perfil-container{
+      max-width: 1024px;
+      margin: auto;
+      padding: 0;
+    }
+  
+    .perfil__info{
+      flex: 1.5;
+    }
+  
+    .perfil__info-title{
+      font-size: 3rem;
+      margin: 0;
+    }
+  
+    .perfil__info-description{
+      font-size: 1.25rem;
+    }
+  
+    .perfil__info-link-container{
+      justify-content: start;
+    }
+  
+    .perfil__cover-image{
+  flex: 1;
+    }
+  
+    .perfil__cover-image-container{
+      width: 20rem;
+      margin: auto auto auto auto;
+    }
+  
+    .promotions-container{
+  max-width: 1024px;
+  margin: auto;
+  padding: 0;
+    }
+}
